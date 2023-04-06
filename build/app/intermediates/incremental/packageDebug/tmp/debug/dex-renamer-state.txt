@@ -1,0 +1,4 @@
+#Thu Apr 06 10:24:49 MMT 2023
+base.0=/Users/nayoolwin/Desktop/project/Flutter/Auth/Flutter_Login_Restful_Api/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
