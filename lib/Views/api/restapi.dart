@@ -13,14 +13,18 @@ class RestApi{
 
   );
   static final _dio=Dio(_options);
-  static void getData({String? base,
+
+  static  getData({String? base,
   String? endpoint,
   String? authkey}) async {
 
     try  {
       var response = await Dio()
-          .get('${base}${endpoint != null ? '?$endpoint' : ""}');
-      print(response.headers);
+          .get('${base}${endpoint != null ? "$endpoint" : ""}');
+      // print(response.data);
+      // print(response.statusCode);
+      return response;
+      // print(response);
     } catch (e) {
       print(e);
     }
@@ -38,12 +42,7 @@ class RestApi{
     if(authKey != null){
       _dio.options.headers={"Authorization":"Bearer $authKey"};
     }
-    // print(https://protocoderspoint.com/jsondata/superheros.json);
-    //   var response=_dio.get(
-    //     // "https://protocoderspoint.com/jsondata/superheros.json",
-    // " ${baseUrl}${query != null ? '?$query' : ""}",
-    // );
-    // print(response.toString());
+
 
   }
   static void post(){
